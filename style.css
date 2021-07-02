@@ -1,0 +1,152 @@
+:root{
+    --clr-primary-300: hsl(300, 69%, 71%);
+    --clr-primary-500: hsl(257, 40%, 49%);
+
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+body{
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: var(--clr-primary-500);
+    color: white;
+}
+
+header{
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 2rem 2rem 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header img{
+    width: 7rem;
+}
+
+main{
+    text-align: center;
+    padding: 0 2rem;
+}
+
+main .left img{
+    width: 100%;
+}
+
+main h1{
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-600);
+    margin-bottom: 1.3rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+main p{
+    font-family: var(--ff-body);
+    font-weight: var(--fw-400);
+    letter-spacing: 0.1rem;
+    line-height: 1.4rem;
+}
+
+.btn{
+    margin-top: 2rem;
+    padding: 1rem 4.5rem;
+    border-radius: 4rem;
+    border-color: white;
+    color: var(--clr-primary-500);
+    box-shadow: 0 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.35);
+}
+
+.btn:active{
+    background-color: var(--clr-primary-300);
+    color: white;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    margin-top: 3rem;
+}
+
+.space-center{
+    margin: 0 0.6rem;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+footer .logo{
+    font-size: 1.2rem;    
+}
+
+@media screen and (min-width: 1440px){
+    body{
+        background-image: url(images/bg-desktop.svg);
+        padding: 1.5rem 4rem 1.5rem 1.5rem;
+    }
+
+    header img{
+        width: 13rem;
+    }
+
+    main{
+        display: flex;
+    }
+
+    .left{
+        flex: 4.5;
+    }
+
+    .right{
+        flex: 4;
+        margin-top: 2.5rem;
+        margin-left: 2.5rem;
+        text-align: left;
+    }
+
+    main h1{
+        font-size: 2.5rem;
+        max-width: 30rem;
+        line-height: 3.5rem;
+    }
+
+    footer{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
